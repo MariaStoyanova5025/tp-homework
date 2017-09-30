@@ -3,6 +3,6 @@ class ApplicationController < ActionController::Base
 
   def show
 	
-	render html: params[:a] + params[:b]
+	render html: params[:a].to_i + params[:b].to_i
   end
 end
