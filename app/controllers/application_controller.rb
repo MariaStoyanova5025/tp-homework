@@ -4,8 +4,6 @@ class ApplicationController < ActionController::Base
   def show
 	render html:"enter a"
 	render html:"enter b"
-	require 'open-uri' 
-	content = URI(https://safe-inlet-62277.herokuapp.com/).read
 		
   end
 end
