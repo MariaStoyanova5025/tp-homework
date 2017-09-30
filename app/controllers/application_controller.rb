@@ -3,6 +3,6 @@ class ApplicationController < ActionController::Base
 
   def show
 	
-	render html: 5 + 6
+	render html: params[:foo]
   end
 end
