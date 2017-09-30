@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   def show
 	render html:"enter a"
 	render html:"enter b"
-	Rack::Utils.parse_nested_query 'param1=value1&param2=value2&param3=value3'
+	
 		
   end
 end
