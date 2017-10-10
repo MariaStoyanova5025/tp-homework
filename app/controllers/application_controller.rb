@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 	i = 0
 	sum = 0
 	while i < arr_of_arrs.length do
-   		sum += arr_of_arrs[i][0]
+   		sum += arr_of_arrs[i][0].to_i
 	end
 	render plain: sum
 	
