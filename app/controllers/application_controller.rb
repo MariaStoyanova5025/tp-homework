@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
  i = 0
  sum = 0
  while i < arr.length do
-     if arr[i][2] % 2 != 0 
+     if arr[i][2].to_i % 2 != 0 
   sum = sum + arr[i][1].to_i
   end
   i+=1
