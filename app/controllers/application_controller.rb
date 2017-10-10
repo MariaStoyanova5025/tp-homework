@@ -58,7 +58,7 @@ def lin_regressions
  	index = []
 	soinost = []
 	i = 0
-	while i < index.lenght do
+	while i < index.length do
 		index[i] = i + 1
 		soinost[i] = arr[0][i]
 		i+=1
