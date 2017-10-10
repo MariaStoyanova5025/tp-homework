@@ -52,5 +52,22 @@ def interval
  render plain: '%.2f'%max.ceil
  
   end
+def lin_regression
+	file = params[:file].read
+ 	arr = CSV.parse(file)
+ 	index = []
+	soinost = []
+	i = 0
+	while i < index.lenght do
+		index[i] = i + 1
+		soinost[i] = arr[0][i]
+		i+=1
+	end
+	linear = Regression::Linear.new(index, soinost)
+	a = linear.slope	
+	b = linear.intercept
+	render plain: '%.6f'%a
+	render plain: '%.6f'%b
+    end
 end
 
