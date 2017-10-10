@@ -1,5 +1,7 @@
+require 'csv'
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :null_sessions
+
 
   def sum
 	file = params[:file].read
