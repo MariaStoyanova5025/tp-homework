@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
    		sum += arr_of_arrs[i][0].to_i
 		i+=1
 	end
-	render plain: sum
+	render plain: sum.ceil.round(2)
 	
   end
 end
