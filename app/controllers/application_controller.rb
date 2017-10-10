@@ -30,5 +30,27 @@ class ApplicationController < ActionController::Base
  render plain: '%.2f'%sum.ceil
  
   end
+def interval
+ file = params[:file].read
+ arr = CSV.parse(file)
+ i = 0
+ k = 0
+ sum = 0
+ max = 0
+ while i < arr.length - 29 do
+  k = i
+     while k < i + 30 do
+   sum = sum + arr[k][0].to_i
+   k+=1  
+  end
+  if sum > max
+   max = sum
+  end
+  sum = 0
+  i+=1
+ end
+ render plain: '%.2f'%max.ceil
+ 
+  end
 end
 
