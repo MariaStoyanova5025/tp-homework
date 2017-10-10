@@ -61,7 +61,7 @@ def lin_regressions
 	i = 0
 	while i < index.length do
 		index[i] = i + 1
-		soinost[i] = arr[0][i].to_i
+		soinost[i] = arr[i][0].to_i
 		i+=1
 	end
 	linear = Regression::Linear.new(index, soinost)
