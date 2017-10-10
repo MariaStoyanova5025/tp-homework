@@ -53,13 +53,13 @@ def interval
  render plain: '%.2f'%max.ceil
  
   end
-def lin_regressions
+  def lin_regressions
 	file = params[:file].read
  	arr = CSV.parse(file)
  	index = []
 	soinost = []
 	i = 0
-	while i < index.length do
+	while i < arr.length do
 		index[i] = i + 1
 		soinost[i] = arr[i][0].to_i
 		i+=1
